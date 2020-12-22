@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane id="GridPane" fx:id="root" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+   <columnConstraints>
+      <ColumnConstraints maxWidth="190.0" minWidth="10.0" prefWidth="181.0" />
+      <ColumnConstraints maxWidth="94.0" minWidth="10.0" prefWidth="69.0" />
+      <ColumnConstraints maxWidth="96.0" minWidth="10.0" prefWidth="50.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+   </rowConstraints>
+   <children>
+      <RadioButton fx:id="mShowString" mnemonicParsing="false" onAction="#onShowString" text="Show this String" GridPane.rowIndex="1">
+         <toggleGroup>
+            <ToggleGroup fx:id="RadioSelections" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="mDateTime" mnemonicParsing="false" onAction="#onDateTime" prefHeight="18.0" prefWidth="166.0" text="Show the Date &amp; Time" toggleGroup="$RadioSelections" />
+      <CheckBox fx:id="mItalics" mnemonicParsing="false" text="Italics" GridPane.columnIndex="1" />
+      <CheckBox fx:id="mBold" mnemonicParsing="false" text="Bold" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <TextField fx:id="mTextField" prefHeight="27.0" prefWidth="278.0" promptText="Enter something here" GridPane.columnSpan="2147483647" GridPane.rowIndex="2" />
+      <Label text="Text Height(in points)" GridPane.rowIndex="3" />
+      <Label text="(8-40)" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <TextField fx:id="mFontSize" text="20" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+   </children>
+</GridPane>
